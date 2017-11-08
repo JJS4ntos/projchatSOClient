@@ -4,6 +4,7 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.time.LocalDateTime;
 
 public class Client {
 	
@@ -21,7 +22,7 @@ public class Client {
 	
 	public void sendMessage(String mensagem) {
 		try {
-			out.writeUTF(socket.getInetAddress().getHostAddress().concat(":").concat(mensagem));
+			out.writeUTF("[".concat(LocalDateTime.now().toString()).concat("]").concat(socket.getInetAddress().getHostAddress().concat("ии").concat(mensagem)));
 			out.flush();
 		}catch(IOException e) {
 			e.printStackTrace();

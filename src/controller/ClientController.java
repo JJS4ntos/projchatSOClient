@@ -53,7 +53,7 @@ public class ClientController implements Initializable {
 		Task<Void> task= new Task<Void>() {
 			protected Void call() throws IOException {
 				while(true) {
-					String[] mensagem=in.readUTF().split(":");
+					String[] mensagem=in.readUTF().split("ии");
 					Platform.runLater(()->list_mensagens.getItems().add(mensagem[0].concat(": ").concat(mensagem[1])));
 				}
 			}
