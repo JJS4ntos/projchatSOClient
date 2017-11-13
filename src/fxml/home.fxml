@@ -4,15 +4,21 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
-
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
    <bottom>
       <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="600.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
             <TextField fx:id="tf_mensagem" prefHeight="25.0" prefWidth="573.0" promptText="Digite qualquer coisa e aperte ENTER" HBox.hgrow="ALWAYS" />
+            <ImageView fx:id="img_sender" fitHeight="32.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@picture.png" />
+               </image>
+            </ImageView>
          </children>
          <padding>
             <Insets left="10.0" right="10.0" />
@@ -25,7 +31,7 @@
    <top>
       <HBox alignment="CENTER" prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: LIGHTBLUE;" BorderPane.alignment="CENTER">
          <children>
-            <Label style="-fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;" text="Olá" />
+            <Label style="-fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;" text="Client Chat Sistemas Operacionais" />
          </children>
       </HBox>
    </top>
