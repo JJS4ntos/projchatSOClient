@@ -54,7 +54,7 @@ public class ClientController implements Initializable {
 	
 	private void criarConexao() {
 		try {
-			client= new Client("127.0.0.1", 666);
+			client= new Client("127.0.0.1", 512);
 			DataInputStream in= new DataInputStream(client.getSocket().getInputStream());
 			Thread thread= new Thread(escutarServidor(in));
 			thread.setDaemon(true);
