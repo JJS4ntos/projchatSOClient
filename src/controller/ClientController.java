@@ -31,6 +31,9 @@ public class ClientController implements Initializable {
 		initActions();
 	}
 	
+	/***
+	 * Inicia as ações nos elementos da tela
+	 */
 	private void initActions() {
 		tf_mensagem.setOnKeyReleased(e->{
 			if(e.getCode()==KeyCode.ENTER) {
@@ -52,6 +55,9 @@ public class ClientController implements Initializable {
 		}));
 	}
 	
+	/***
+	 * Cria conexão com o servidor
+	 */
 	private void criarConexao() {
 		try {
 			client= new Client("127.0.0.1", 512);
@@ -63,6 +69,11 @@ public class ClientController implements Initializable {
 		catch(IOException e) {e.printStackTrace();}
 	}
 	
+	/***
+	 * Cria uma tarefa de loop infinito para escutar tudo que vier do servidor
+	 * @param in
+	 * @return
+	 */
 	private Task<Void> escutarServidor(DataInputStream in) {
 		Task<Void> task= new Task<Void>() {
 			protected Void call() throws IOException {
